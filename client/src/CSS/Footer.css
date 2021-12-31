@@ -1,0 +1,8 @@
+.footer_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	width: 50%;
+	border: 2px solid black;
+}
