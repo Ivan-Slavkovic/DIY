@@ -10,11 +10,11 @@ import CreatePost from './Components/CreatePost';
 function App() {
 	return (
 		<React.Fragment>
-			{/* <Login /> */}
-			{/* <Register /> */}
-			{/* <Card /> */}
-			{/* <FAQ /> */}
-			{/* <Footer /> */}
+			<Login />
+			<Register />
+			<Card />
+			<FAQ />
+			<Footer />
 			<CreatePost />
 		</React.Fragment>
 	);
