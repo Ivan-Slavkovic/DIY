@@ -4,10 +4,6 @@ import React from 'react';
 const FAQ = () => {
 	return (
 		<React.Fragment>
-			{/* <div className="FAQ_container"> */}
-			{/* <div className="center_FAQ">
-					<h3>FAQ</h3>
-				</div> */}
 			<div className="FAQ_content">
 				<div className="center_FAQ">
 					<h3>FAQ</h3>
@@ -86,7 +82,6 @@ const FAQ = () => {
 					<div className="answers">Ovde ide odgovor za pitane</div>
 				</div>
 			</div>
-			{/* </div> */}
 		</React.Fragment>
 	);
 };
