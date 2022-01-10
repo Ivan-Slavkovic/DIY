@@ -3,7 +3,7 @@
 import { useState } from 'react';
 const CreatePost = () => {
 	const submitHandler = () => {
-		console.log('s');
+		// console.log('s');
 	};
 
 	const [ youtubeVideo, setYoutubeVideo ] = useState('');
