@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import '../CSS/Login.css';
+import store from '../store';
 import { UserDataLogin } from '../utils/DataFetch';
 
 const Login = () => {
+	const reduxEmail = useSelector((state) => state.email);
+	const reduxPassword = useSelector((state) => state.password);
+
+	const dispatch = useDispatch();
+	// console.log(counter);
+
 	const [ form, setForm ] = useState({
 		email : '',
 		pass  : ''
@@ -54,7 +62,7 @@ const Login = () => {
 			...form,
 			[e.target.name]: e.target.value
 		});
-		console.log(e.target.name);
+		// console.log(e.target.name);
 	};
 
 	const onLoginClick = async (e) => {
@@ -68,7 +76,7 @@ const Login = () => {
 		validate();
 		if (isValid()) {
 			var result = await UserDataLogin(form);
-			console.log(result);
+			// console.log(result);
 			if (result.status === 200) {
 				//redirect to main page
 				setLoginMessage(
@@ -76,6 +84,7 @@ const Login = () => {
 						You have successfully logged in
 					</span>
 				);
+				store.dispatch({ type: 'login' });
 			} else {
 				//stay on the same one
 				setLoginMessage(
@@ -84,7 +93,13 @@ const Login = () => {
 					</span>
 				);
 			}
+			dispatch({
+				type     : 'login',
+				email    : form.email,
+				password : form.pass
+			});
 		}
+		console.log(reduxEmail, reduxPassword);
 	};
 
 	let isValid = () => {

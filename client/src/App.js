@@ -11,11 +11,11 @@ function App() {
 	return (
 		<React.Fragment>
 			<Login />
-			<Register />
-			<Card />
-			<FAQ />
-			<Footer />
-			<CreatePost />
+			{/* <Register /> */}
+			{/* <Card /> */}
+			{/* <FAQ /> */}
+			{/* <Footer /> */}
+			{/* <CreatePost /> */}
 		</React.Fragment>
 	);
 }

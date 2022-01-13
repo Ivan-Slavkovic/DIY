@@ -1,13 +1,16 @@
 import { createStore } from 'redux';
-
-const storeReducer = (state = { counter: 0 }, action) => {
-	if (action.type === 'increment') {
+const initialState = {
+	email    : '',
+	password : ''
+};
+const storeReducer = (state = initialState, action) => {
+	if (action.type === 'login') {
 		return {
-			counter : state.counter + 1
+			email    : state.email,
+			password : state.password
 		};
 	}
-
-	if (action.type === 'decrement') {
+	if (action.type === 'register') {
 		return {
 			counter : state.counter - 1
 		};
@@ -16,5 +19,5 @@ const storeReducer = (state = { counter: 0 }, action) => {
 };
 
 const store = createStore(storeReducer);
-
+// store.dispatch({ type: 'increment' });
 export default store;

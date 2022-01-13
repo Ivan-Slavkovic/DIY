@@ -1,4 +1,5 @@
-// Moras da uradis REDUX preko kojeg vuces name i email i prosledjujes ovde
+// Moras da uradis REDUX preko kojeg vuces name i email i
+//prosledjujes ovde
 // da ne bi unosio 2 puta iste podatke
 import { useState } from 'react';
 const CreatePost = () => {
